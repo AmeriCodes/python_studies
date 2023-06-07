@@ -1,5 +1,6 @@
 Due to my short experience in another course, I avoided uploading very basic information and exercises. Instead, I chose to create a Readme file solely for notes on small tricks and things I didn't know about Python, reserving the .py files exclusively for exercises and projects from the course.
 
+```python
 # This is a comentary function
 
 """This is a DocString """
@@ -9,7 +10,7 @@ Due to my short experience in another course, I avoided uploading very basic inf
 Comments, on the other hand, are snippets of text added to the code to provide explanations or annotations to programmers. They are ignored by the Python interpreter and have no impact on program execution.
 
 In summary, docstrings are for documentation, accessible at runtime, while comments are for clarification purposes and are ignored by the Python interpreter."""
-
+```
 
 The 'print' function displays something on the screen. It can accumulate multiple arguments by separating them with commas. By default, Python will add a space between the arguments, but this can be changed using the 'sep="?"' command, where whatever is placed inside the quotation marks will be used as a separator. The 'end=''' command is used to prevent line breaks.
 
