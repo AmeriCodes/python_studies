@@ -86,7 +86,7 @@ password = input('Password: ') or 'No password entered'
 print(password)
 ```
 
-Basic string interpolation:
+### Basic string interpolation:
 
 s - string
 d and i - integer
@@ -101,7 +101,7 @@ print(variable)
 print('The hexadecimal of %d is %04X' % (256, 256))
 ```
 
-f-strings
+### f-strings
 ```python	
 variable = 'ABC'
 print(f'{variable}')
@@ -112,3 +112,41 @@ print(f'{1188.1982374578:h>+10,.1f}') # output>    hh+1,188.2
 print(f'{1188.1982374578:x=+12,.1f}') # output>    +xxxx1,188.2
 print(f'The hexadecimal of 1500 is {1500:X}') # output>     The hexadecimal of 1500 is 5DC
 ```
+
+### Assignment Operators 
+
+Assignment: =
+Addition: +=
+Subtraction: -=
+Multiplication: *=
+Division: /=
+Floor Division: //=
+Modulo: %=
+Exponentiation: **=
+Bitwise OR: |=
+Bitwise AND: &=
+Bitwise XOR: ^=
+Left Shift: <<=
+Right Shift: >>=
+
+
+### while/else
+
+```python
+""" while/else """
+string = 'Valor qualquer'
+
+i = 0
+while i < len(string):
+    letra = string[i]
+
+    if letra == ' ':
+        break
+
+    print(letra)
+    i += 1
+else:
+    print('Não encontrei um espaço na string.')
+print('Fora do while.')
+```
+
