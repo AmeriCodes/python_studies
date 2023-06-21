@@ -132,21 +132,28 @@ Right Shift: >>=
 
 ### while/else
 
+In Python, using else with while is a specific construct that allows executing a code block when the while condition becomes false. The else clause is executed only if the while loop is completed normally, meaning if the while condition becomes false.
+
+This while-else structure can be useful to perform a specific action after iterating through all the elements of a while loop, without the need for an additional control variable to check if the loop was successfully completed.
+
 ```python
 """ while/else """
-string = 'Valor qualquer'
+string = 'Any value'
 
 i = 0
 while i < len(string):
-    letra = string[i]
+    letter = string[i]
 
-    if letra == ' ':
+    if letter == ' ':
         break
 
-    print(letra)
+    print(letter)
     i += 1
 else:
-    print('Não encontrei um espaço na string.')
-print('Fora do while.')
+    print('No space found in the string.')
+print('Outside the while loop.')
 ```
 
+In this context, else in while serves to execute a specific code block when the while condition is not interrupted by a break statement. In the provided example, the else block is triggered if no space is found in the string during the loop.
+
+If there is a break statement inside the while, the code block under else will not be executed as the execution of the loop was abruptly terminated.
