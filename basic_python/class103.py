@@ -1,56 +1,42 @@
-"""
-Calculo do primeiro dígito do CPF
-CPF: 746.824.890-70
-Colete a soma dos 9 primeiros dígitos do CPF
-multiplicando cada um dos valores por uma
-contagem regressiva começando de 10
 
-Ex.:  746.824.890-70 (746824890)
-   10  9  8  7  6  5  4  3  2
-*  7   4  6  8  2  4  8  9  0
-   70  36 48 56 12 20 32 27 0
+import sys
 
-Somar todos os resultados: 
-70+36+48+56+12+20+32+27+0 = 301
-Multiplicar o resultado anterior por 10
-301 * 10 = 3010
-Obter o resto da divisão da conta anterior por 11
-3010 % 11 = 7
-Se o resultado anterior for maior que 9:
-    resultado é 0
-contrário disso:
-    resultado é o valor da conta
+user_input_cpf = input('CPF: ') \
+    .replace('.', '') \
+    .replace(' ', '') \
+    .replace('-', '') 
 
-O primeiro dígito do CPF é 7
-"""
+is_sequential_input = user_input_cpf == user_input_cpf[0] * len(user_input_cpf)
 
+if is_sequential_input:
+    print('You entered sequential data')
+    sys.exit()
 
-cpf_enviado_usuario = input('CPF: ')
-nove_digitos = cpf_enviado_usuario[:9]
-contador_regressivo_1 = 10
+nine_digits = user_input_cpf[:9]
+countdown_counter_1 = 10
 
-resultado_digito_1 = 0
-for digito in nove_digitos:
-    resultado_digito_1 += int(digito) * contador_regressivo_1
-    contador_regressivo_1 -= 1
+result_digit_1 = 0
+for digit in nine_digits:
+    result_digit_1 += int(digit) * countdown_counter_1
+    countdown_counter_1 -= 1
 
-digito_1 = (resultado_digito_1 * 10) % 11
-digito_1 = digito_1 if digito_1 <= 9 else 0
+digit_1 = (result_digit_1 * 10) % 11
+digit_1 = digit_1 if digit_1 <= 9 else 0
 
-dez_digitos = nove_digitos + str(digito_1)
-contador_regressivo_2 = 11
+ten_digits = nine_digits + str(digit_1)
+countdown_counter_2 = 11
 
-resultado_digito_2 = 0
-for digito in dez_digitos:
-    resultado_digito_2 += (int(digito) * contador_regressivo_2)
-    contador_regressivo_2 -= 1
-digito_2 = (resultado_digito_2 * 10) % 11
-digito_2 = digito_2 if digito_2 <= 9 else 0
+result_digit_2 = 0
+for digit in ten_digits:
+    result_digit_2 += (int(digit) * countdown_counter_2)
+    countdown_counter_2 -= 1
 
-cpf_gerad_pelo_calculo = f'{nove_digitos}{digito_1}{digito_2}'
+digit_2 = (result_digit_2 * 10) % 11
+digit_2 = digit_2 if digit_2 <= 9 else 0
 
-if cpf_enviado_usuario == cpf_gerad_pelo_calculo:
-    print(f'{cpf_enviado_usuario} é válido')
+calculated_cpf = f'{nine_digits}{digit_1}{digit_2}'
 
+if user_input_cpf == calculated_cpf:
+    print(f'{user_input_cpf} is valid')
 else:
-    print('CPF inválido')
+    print('Invalid CPF')
