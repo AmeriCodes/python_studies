@@ -50,6 +50,9 @@ The local scope is the scope where only names within the same location can be ac
 
 ### Higher Order Functions - Functions that can receive and/or return other functions.
 
+In Python, a higher-order function is a function that can receive other functions as arguments and/or return them as a result. This means that functions can be treated as values and manipulated flexibly in the code. This capability allows for powerful abstractions, such as passing custom behaviors to functions, function composition, and the implementation of functional patterns. Higher-order functions are a fundamental part of functional programming in Python.
+
+
 ```python	
 def apply_operation(func, lst):
     result = []
@@ -66,6 +69,9 @@ print(result)  # Output: [1, 4, 9, 16, 25]
 ```
 
 ### First-Class Functions - Functions that are treated like other common data types (strings, integers, etc.).
+
+In Python, a first-class function refers to a function that can be assigned to a variable, passed as an argument to other functions, and returned as a result of a function. In other words, functions are treated as any other object, allowing them to be manipulated flexibly and dynamically in the code. This enables the creation of higher-order functions, such as return functions, nested functions, and lambda functions
+
 
 ```python
 def create_power_function(exponent):
