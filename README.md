@@ -1,1 +1,1 @@
-My studies of python
+My python studies
